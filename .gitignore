@@ -1,0 +1,10 @@
+# Binaries
+/bin/
+/memo
+
+# OS files
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
