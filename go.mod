@@ -1,4 +1,4 @@
-module github.com/AobaIwaki123/memo-cli
+module github.com/AobaIwaki123/shiori
 
 go 1.26.4
 

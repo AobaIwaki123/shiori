@@ -1,6 +1,6 @@
-# memo-cli
+# shiori (栞)
 
-CLI tool to manage time-decaying personal markdown memos (`YYYY-MM-DD-HHMM_<slug>.md`) with automated freshness lifecycles (HOT, WARM, COLD).
+CLI tool to manage time-decaying personal markdown memos and handovers (`YYYY-MM-DD-HHMM_<slug>.md`) with automated freshness lifecycles (HOT, WARM, COLD).
 
 ---
 
@@ -8,13 +8,13 @@ CLI tool to manage time-decaying personal markdown memos (`YYYY-MM-DD-HHMM_<slug
 
 ### Via `go install`
 ```bash
-go install github.com/AobaIwaki123/memo-cli/cmd/memo@latest
+go install github.com/AobaIwaki123/shiori/cmd/shiori@latest
 ```
 
 ### From source
 ```bash
-git clone https://github.com/AobaIwaki123/memo-cli.git
-cd memo-cli
+git clone https://github.com/AobaIwaki123/shiori.git
+cd shiori
 make install
 ```
 
@@ -29,19 +29,19 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 
 ```bash
 # List active memos (HOT and WARM)
-memo list
+shiori list
 
 # Show latest hot memo content
-memo show
+shiori show
 
 # Create a new memo
-memo new "sunday-reflection" -title="Sunday Reflection" -tags="reflection,weekend"
+shiori new "sunday-reflection" -title="Sunday Reflection" -tags="reflection,weekend"
 
 # Auto-decay expired memos (48h -> WARM, 7d -> COLD)
-memo decay
+shiori decay
 
 # Print file path for editor integration
-code $(memo path)
+code $(shiori path)
 ```
 
 ---

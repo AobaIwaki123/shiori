@@ -8,16 +8,16 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/AobaIwaki123/memo-cli/pkg/memo"
+	"github.com/AobaIwaki123/shiori/pkg/memo"
 )
 
 const version = "0.1.0"
 
 func printUsage() {
-	fmt.Fprintf(os.Stderr, `memo - Personal Time-Decaying Memo CLI (v%s)
+	fmt.Fprintf(os.Stderr, `shiori - Personal Time-Decaying Memo & Handover CLI (v%s)
 
 Usage:
-  memo [command] [options]
+  shiori [command] [options]
 
 Commands:
   list                 List recent active memos (default command)
@@ -73,7 +73,7 @@ func main() {
 	case "decay":
 		runDecay(args)
 	case "version", "-v", "--version":
-		fmt.Printf("memo version %s\n", version)
+		fmt.Printf("shiori version %s\n", version)
 	case "help", "-h", "--help":
 		printUsage()
 	default:

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "=== Verifying memo-cli ==="
+echo "=== Verifying shiori ==="
 
 echo "1. Formatting check..."
 diff_files="$(gofmt -l .)"
@@ -15,11 +15,11 @@ echo "2. Go vet..."
 go vet ./...
 
 echo "3. Go build..."
-go build -o /dev/null ./cmd/memo
+go build -o /dev/null ./cmd/shiori
 
 echo "4. Running smoke tests..."
-go run ./cmd/memo list > /dev/null
-go run ./cmd/memo path > /dev/null
-go run ./cmd/memo decay -dry-run > /dev/null
+go run ./cmd/shiori list > /dev/null
+go run ./cmd/shiori path > /dev/null
+go run ./cmd/shiori decay -dry-run > /dev/null
 
-echo "=== All memo-cli verifications passed successfully! ==="
+echo "=== All shiori verifications passed successfully! ==="

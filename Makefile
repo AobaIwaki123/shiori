@@ -1,5 +1,5 @@
-BIN_NAME := memo
-PKG := github.com/AobaIwaki123/memo-cli/cmd/memo
+BIN_NAME := shiori
+PKG := github.com/AobaIwaki123/shiori/cmd/shiori
 PREFIX ?= $(shell go env GOPATH)
 BINDIR ?= $(PREFIX)/bin
 
@@ -8,10 +8,10 @@ BINDIR ?= $(PREFIX)/bin
 all: build
 
 build:
-	go build -o bin/$(BIN_NAME) ./cmd/memo
+	go build -o bin/$(BIN_NAME) ./cmd/shiori
 
 install:
-	go install ./cmd/memo
+	go install ./cmd/shiori
 	@echo "Installed $(BIN_NAME) to $(BINDIR)/$(BIN_NAME)"
 
 test:
